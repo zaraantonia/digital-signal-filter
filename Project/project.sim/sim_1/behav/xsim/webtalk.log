@@ -2,13 +2,13 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Dec 13 19:32:39 2021
-# Process ID: 6864
-# Current directory: D:/3.1/SCS/Project/project.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source D:/3.1/SCS/Project/project.sim/sim_1/behav/xsim/xsim.dir/pseudoRandomGenerator_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: D:/3.1/SCS/Project/project.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: D:/3.1/SCS/Project/project.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Mon Dec 13 20:18:55 2021
+# Process ID: 11924
+# Current directory: C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.sim/sim_1/behav/xsim/xsim.dir/tbfilters_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source D:/3.1/SCS/Project/project.sim/sim_1/behav/xsim/xsim.dir/pseudoRandomGenerator_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'D:/3.1/SCS/Project/project.sim/sim_1/behav/xsim/xsim.dir/pseudoRandomGenerator_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Dec 13 19:32:43 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Mon Dec 13 19:32:43 2021...
+source C:/Users/Antonia/Desktop/GitHub -notrace
+couldn't read file "C:/Users/Antonia/Desktop/GitHub": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Mon Dec 13 20:18:55 2021...

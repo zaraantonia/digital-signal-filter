@@ -41,7 +41,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/fullAdder.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/fullAdder.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/fullAdder.vhd"/>
         <Attr Name="ImportTime" Val="1634718049"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -50,7 +50,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/halfAdder.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/halfAdder.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/halfAdder.vhd"/>
         <Attr Name="ImportTime" Val="1634719042"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -66,7 +66,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/wallaceTree.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/wallaceTree.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/wallaceTree.vhd"/>
         <Attr Name="ImportTime" Val="1634725648"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -82,7 +82,7 @@
     <File Path="$PSRCDIR/sources_1/imports/Lab1/mpg.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="C:/Users/Antonia/Desktop/CA/lab-30423-2-assignment-zaraantonia/Lab1/mpg.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../CA/lab-30423-2-assignment-zaraantonia/Lab1/mpg.vhd"/>
         <Attr Name="ImportTime" Val="1614445187"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -98,7 +98,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/carryLookaheadAdder.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/carryLookaheadAdder.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/carryLookaheadAdder.vhd"/>
         <Attr Name="ImportTime" Val="1634718861"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -107,7 +107,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/carryBlock2.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock2.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock2.vhd"/>
         <Attr Name="ImportTime" Val="1634716609"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -116,7 +116,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/carryBlock3.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock3.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock3.vhd"/>
         <Attr Name="ImportTime" Val="1634716683"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -125,7 +125,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/carryBlock4.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock4.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock4.vhd"/>
         <Attr Name="ImportTime" Val="1634716747"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -134,7 +134,7 @@
     <File Path="$PSRCDIR/sources_1/imports/new/carryBlock1.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock1.vhd"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab3/Lab3/Lab3.srcs/sources_1/new/carryBlock1.vhd"/>
         <Attr Name="ImportTime" Val="1634716436"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -163,7 +163,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/Lab5/basys3.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab5/Lab5/basys3.xdc"/>
+        <Attr Name="ImportPath" Val="D:/3.1/SCS/Lab5/Lab5/basys3.xdc"/>
         <Attr Name="ImportTime" Val="1635325943"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -171,7 +171,7 @@
     </File>
     <File Path="$PSRCDIR/constrs_1/imports/Desktop/constraints.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="C:/Users/Antonia/Desktop/constraints.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../constraints.xdc"/>
         <Attr Name="ImportTime" Val="1639343057"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
