@@ -47,12 +47,20 @@ signal rc, rd, sum2: std_logic_vector(7 downto 0) := (others => '0');
 signal cout2: std_logic := '0';
 
 --input states
-signal xn, xn1, xn2: std_logic_vector(7 downto 0) := (others => '0');
+signal xn, xn1, xn2, xn3, xn4: std_logic_vector(7 downto 0) := (others => '0');
 --output states
 signal yn, yn1: std_logic_vector(7 downto 0) := (others => '0');
 
 --counter for n
 signal n: std_logic_vector(7 downto 0) := "00000000";
+
+--signal for 010 filter, pipeline issues
+signal xn2_pipeline: std_logic_vector(7 downto 0) := "00000000";
+signal xn2_pipeline_en: std_logic := '0';
+
+--signal for 001 filter, pipeline issues
+signal xn1_pipeline_001: std_logic_vector(7 downto 0) := "00000000";
+signal xn1_pipeline_001_en: std_logic := '0';
 
 begin
 
@@ -67,6 +75,14 @@ rippleCarryAdder2: rippleCarryAdder port map (a => rc, b => rd, cin => cout1, su
 process(clk)
 begin
     if rising_edge(clk) then
+        if xn2_pipeline_en = '1' then
+            xn2_pipeline <= xn2;
+        end if;
+        if xn1_pipeline_001_en = '1' then
+            xn1_pipeline_001 <= xn;
+        end if;
+        xn4 <= xn3;
+        xn3 <= xn2;
         xn2 <= xn1;
         xn1 <= xn;
         xn <= x;
@@ -97,6 +113,8 @@ begin
                 rb <= product2;
                 rc <= sum1;
                 rd <= "00000000";
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '0';
             --xn + 2*n*xn1
             when "001" =>
                 a <= "00000010";
@@ -105,10 +123,12 @@ begin
                 d <= xn1;
                 e <= "00000000";
                 f <= "00000000";
-                ra <= xn;
+                ra <= xn1_pipeline_001;
                 rb <= product2;
                 rc <= sum1;
                 rd <= "00000000";
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '1';
             --4xn + 2xn1 + 3xn2
             when "010" =>
                 a <= "00000100";
@@ -116,11 +136,13 @@ begin
                 c <= "00000010";
                 d <= xn1;
                 e <= "00000011";
-                f <= xn2;
+                f <= xn2_pipeline;
                 ra <= product1;
                 rb <= product2;
                 rc <= sum1;
                 rd <= product3;
+                xn2_pipeline_en <= '1';
+                xn1_pipeline_001_en <= '0';
             --2xn - xn1 + 3yn1
             when "011" =>
                 a <= "00000010";
@@ -133,6 +155,8 @@ begin
                 rb <= product2;
                 rc <= sum1;
                 rd <= product3;
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '0';
             --xn*xn + xn1*xn1
             when "100" =>
                 a <= xn;
@@ -145,6 +169,8 @@ begin
                 rb <= product2;
                 rc <= sum1;
                 rd <= "00000000";
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '0';
             --h0 * xn + h1 * xn1 + h2 *xn2 --TODO
             when "101" =>
                 a <= "00000000";
@@ -157,6 +183,8 @@ begin
                 rb <= "00000000";
                 rc <= "00000000";
                 rd <= "00000000";
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '0';
             when "110" =>
                 a <= "00000000";
                 b <= "00000000";
@@ -168,6 +196,8 @@ begin
                 rb <= "00000000";
                 rc <= "00000000";
                 rd <= "00000000";
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '0';
             when "111" =>
                 a <= "00000000";
                 b <= "00000000";
@@ -179,6 +209,8 @@ begin
                 rb <= "00000000";
                 rc <= "00000000";
                 rd <= "00000000";
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '0';
             when others =>
                 a <= "00000000";
                 b <= "00000000";
@@ -190,6 +222,8 @@ begin
                 rb <= "00000000";
                 rc <= "00000000";
                 rd <= "00000000";
+                xn2_pipeline_en <= '0';
+                xn1_pipeline_001_en <= '0';
         end case;
    end if;
 end process;

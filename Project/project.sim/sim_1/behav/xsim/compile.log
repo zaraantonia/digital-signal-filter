@@ -1,14 +1,2 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'filters'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'fullAdder'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'halfAdder'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'multiplier8bit'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'rippleCarryAdder'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'wallaceTree'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/tbfilters.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tbfilters'
