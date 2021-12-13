@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project.srcs/sources_1/imports/new/fullAdder.vhd" \
+"../../../../project.srcs/sources_1/imports/new/halfAdder.vhd" \
+"../../../../project.srcs/sources_1/new/rippleCarryAdder.vhd" \
+"../../../../project.srcs/sources_1/imports/new/wallaceTree.vhd" \
+"../../../../project.srcs/sources_1/new/multiplier8bit.vhd" \
+
+# Do not sort compile order
+nosort

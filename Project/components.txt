@@ -1,0 +1,6 @@
+Components needed:
+Serial Communicator Input
+Serial Communicator Output
+Adder
+Multiplier
+Filter Selecter
