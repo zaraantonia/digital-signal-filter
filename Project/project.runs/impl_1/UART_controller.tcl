@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/3.1/SCS/Project/project.runs/impl_1/UART_controller.tcl"
+  variable script "C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.runs/impl_1/UART_controller.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,22 +123,23 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/3.1/SCS/Project/project.cache/wt [current_project]
-  set_property parent.project_path D:/3.1/SCS/Project/project.xpr [current_project]
-  set_property ip_output_repo D:/3.1/SCS/Project/project.cache/ip [current_project]
+  set_property webtalk.parent_dir {C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/3.1/SCS/Project/project.runs/synth_1/UART_controller.dcp
+  add_files -quiet {{C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.runs/synth_1/UART_controller.dcp}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/3.1/SCS/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc
-  read_xdc D:/3.1/SCS/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc
+  read_xdc {{C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc}}
+  read_xdc {{C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -295,34 +296,4 @@ if {$rc} {
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
-OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
-OPTRACE "write_bitstream setup" START { }
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-OPTRACE "read constraints: write_bitstream" START { }
-OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force -no_partial_mmi UART_controller.mmi }
-OPTRACE "write_bitstream setup" END { }
-OPTRACE "write_bitstream" START { }
-  write_bitstream -force UART_controller.bit 
-OPTRACE "write_bitstream" END { }
-OPTRACE "write_bitstream misc" START { }
-OPTRACE "read constraints: write_bitstream_post" START { }
-OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force UART_controller}
-  catch {file copy -force UART_controller.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "write_bitstream misc" END { }
-OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }
