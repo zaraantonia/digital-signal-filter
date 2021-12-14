@@ -31,6 +31,6 @@ begin
     wait for 5us;
 end process;
 
-filterSelect <= "001";
+filterSelect <= "011";
 
 end Behavioral;

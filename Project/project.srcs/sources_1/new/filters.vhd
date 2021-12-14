@@ -43,7 +43,7 @@ signal of3: std_logic := '0';
 signal ra, rb, sum1: std_logic_vector(7 downto 0) := (others => '0');
 signal cout1: std_logic := '0';
 --second ripple carry adder signals
-signal rc, rd, sum2: std_logic_vector(7 downto 0) := (others => '0');
+signal rc, rd, sum2, sum2n1: std_logic_vector(7 downto 0) := (others => '0');
 signal cout2: std_logic := '0';
 
 --input states
@@ -61,6 +61,10 @@ signal xn2_pipeline_en: std_logic := '0';
 --signal for 001 filter, pipeline issues
 signal xn1_pipeline_001: std_logic_vector(7 downto 0) := "00000000";
 signal xn1_pipeline_001_en: std_logic := '0';
+
+--signal for 001 filter, pipeline issues
+signal yn_pipeline_011: std_logic_vector(7 downto 0) := "00000001";
+signal yn_pipeline_011_en: std_logic := '1';
 
 begin
 
@@ -115,6 +119,7 @@ begin
                 rd <= "00000000";
                 xn2_pipeline_en <= '0';
                 xn1_pipeline_001_en <= '0';
+                yn_pipeline_011_en <= '0';
             --xn + 2*n*xn1
             when "001" =>
                 a <= "00000010";
@@ -129,6 +134,7 @@ begin
                 rd <= "00000000";
                 xn2_pipeline_en <= '0';
                 xn1_pipeline_001_en <= '1';
+                yn_pipeline_011_en <= '0';
             --4xn + 2xn1 + 3xn2
             when "010" =>
                 a <= "00000100";
@@ -143,6 +149,7 @@ begin
                 rd <= product3;
                 xn2_pipeline_en <= '1';
                 xn1_pipeline_001_en <= '0';
+                yn_pipeline_011_en <= '0';
             --2xn - xn1 + 3yn1
             when "011" =>
                 a <= "00000010";
@@ -150,7 +157,12 @@ begin
                 c <= "00000001";
                 d <= (xn1 nand "11111111") + '1'; -- (-xn1)
                 e <= "00000011";
-                f <= yn1;
+                --if yn_pipeline_011_en = '1' then
+                 --   f <= yn_pipeline_011;
+                  --  yn_pipeline_011_en <= '0';
+                --else 
+                f <= sum2;
+                --end if;
                 ra <= product1;
                 rb <= product2;
                 rc <= sum1;
