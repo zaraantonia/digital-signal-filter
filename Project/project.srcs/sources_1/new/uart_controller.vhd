@@ -10,7 +10,7 @@ entity UART_controller is
         reset            : in  std_logic;
         tx_enable        : in  std_logic;
 
-        --data_in          : in  std_logic_vector (7 downto 0);
+        data_in          : in  std_logic_vector (7 downto 0);
         data_out         : out std_logic_vector (7 downto 0);
 
         rx               : in  std_logic;
@@ -47,17 +47,17 @@ architecture Behavioral of UART_controller is
    
 
     signal button_pressed,off : std_logic;
-    signal data_in: std_logic_vector(7 downto 0);
+    --signal data_in: std_logic_vector(7 downto 0);
 
 begin
 
---    tx_button_controller: button_debounce
---    port map(
---            clk            => clk,
---            reset          => reset,
---            button_in      => tx_enable,
---            button_out     => button_pressed
---            );
+    tx_button_controller: button_debounce
+    port map(
+            clk            => clk,
+            reset          => reset,
+            button_in      => tx_enable,
+            button_out     => button_pressed
+            );
 
     UART_transceiver: UART
     port map(

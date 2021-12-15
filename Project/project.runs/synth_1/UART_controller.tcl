@@ -87,6 +87,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
+  {C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/debouncer.vhd}
   {C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd}
   {C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd}
   {C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd}
