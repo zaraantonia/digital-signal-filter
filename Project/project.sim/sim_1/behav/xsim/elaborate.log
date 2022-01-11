@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 7c10e0456e0f4a4eba3818f7a3b98255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tbfilters_behav xil_defaultlib.tbfilters -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 7c10e0456e0f4a4eba3818f7a3b98255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -19,5 +19,5 @@ Compiling architecture behavioral of entity xil_defaultlib.wallaceTree [wallacet
 Compiling architecture behavioral of entity xil_defaultlib.rippleCarryAdder [ripplecarryadder_default]
 Compiling architecture behavioral of entity xil_defaultlib.multiplier8bit [multiplier8bit_default]
 Compiling architecture behavioral of entity xil_defaultlib.filters [filters_default]
-Compiling architecture behavioral of entity xil_defaultlib.tbfilters
-Built simulation snapshot tbfilters_behav
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot testbench_behav

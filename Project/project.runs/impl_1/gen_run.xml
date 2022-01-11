@@ -1,80 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1641922849">
-  <File Type="BITSTR-BMM" Name="UART_final_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="UART_final_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="UART_final_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="UART_final_power_routed.rpt"/>
   <File Type="PA-TCL" Name="UART_final.tcl"/>
-  <File Type="OPT-TIMING" Name="UART_final_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="UART_final_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="UART_final_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="UART_final_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="UART_final.msk"/>
+  <File Type="ROUTE-CLK" Name="UART_final_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="UART_final.vdi"/>
+  <File Type="BG-BIT" Name="UART_final.bit"/>
+  <File Type="BG-DRC" Name="UART_final.drc"/>
+  <File Type="BG-BGN" Name="UART_final.bgn"/>
+  <File Type="BG-BIN" Name="UART_final.bin"/>
+  <File Type="BITSTR-RBT" Name="UART_final.rbt"/>
+  <File Type="BITSTR-NKY" Name="UART_final.nky"/>
+  <File Type="BITSTR-BMM" Name="UART_final_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="UART_final_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="UART_final.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="UART_final.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="UART_final.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="UART_final_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="UART_final.hwdef"/>
-  <File Type="PWROPT-DCP" Name="UART_final_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="UART_final_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="UART_final_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="UART_final_placed.dcp"/>
   <File Type="PLACE-IO" Name="UART_final_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="UART_final_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="UART_final_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="UART_final_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="UART_final_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="UART_final_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="UART_final_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="UART_final_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="UART_final_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="UART_final.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="UART_final_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="UART_final_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="UART_final_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="UART_final.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="UART_final_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="UART_final_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="UART_final_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="UART_final_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="UART_final_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="UART_final_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="UART_final_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="UART_final.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="UART_final_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="UART_final_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="UART_final_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="UART_final_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="UART_final_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="UART_final_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="UART_final_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="UART_final_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="UART_final_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="UART_final_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="UART_final_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="UART_final_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="UART_final_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="UART_final_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="UART_final_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="UART_final_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="UART_final_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="UART_final_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="UART_final_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="UART_final_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="UART_final_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="UART_final_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="UART_final_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="UART_final_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="UART_final_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="UART_final_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="UART_final_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="UART_final_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="UART_final_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="UART_final.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="UART_final_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="UART_final.rbt"/>
-  <File Type="BITSTR-NKY" Name="UART_final.nky"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="UART_final_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="UART_final_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="UART_final_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="UART_final.pdi"/>
   <File Type="RCFI_FILE" Name="UART_final.rcfi"/>
   <File Type="CFI_FILE" Name="UART_final.cfi"/>
   <File Type="RNPI_FILE" Name="UART_final.rnpi"/>
   <File Type="NPI_FILE" Name="UART_final.npi"/>
   <File Type="RBD_FILE" Name="UART_final.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="UART_final.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="UART_final.sysdef"/>
-  <File Type="BG-BGN" Name="UART_final.bgn"/>
-  <File Type="BG-DRC" Name="UART_final.drc"/>
-  <File Type="RDI-RDI" Name="UART_final.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/debouncer.vhd">
@@ -192,5 +174,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
