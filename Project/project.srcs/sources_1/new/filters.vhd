@@ -8,6 +8,7 @@ entity filters is
     Port ( x : in STD_LOGIC_VECTOR (7 downto 0);
            y : out STD_LOGIC_VECTOR (7 downto 0);
            clk : in STD_LOGIC;
+           new_input: in std_logic;
            filterSelect : in STD_LOGIC_VECTOR (2 downto 0);
            overflow: out std_logic);
 end filters;
@@ -79,6 +80,7 @@ rippleCarryAdder2: rippleCarryAdder port map (a => rc, b => rd, cin => cout1, su
 process(clk)
 begin
     if rising_edge(clk) then
+    if new_input = '1' then
         if xn2_pipeline_en = '1' then
             xn2_pipeline <= xn2;
         end if;
@@ -95,6 +97,7 @@ begin
         yn <= sum2;
         y <= yn;
     end if;
+    end if;
 end process;
 
 --any overflow from any component signals an error in calculation
@@ -104,6 +107,7 @@ overflow <= of1 or of2 or of3 or cout2;
 process(filterSelect,clk)
 begin
     if rising_edge(clk) then
+    if new_input = '1' then
         case filterSelect is
             --2xn + 3xn1
             when "000" =>
@@ -237,6 +241,7 @@ begin
                 xn2_pipeline_en <= '0';
                 xn1_pipeline_001_en <= '0';
         end case;
+   end if;
    end if;
 end process;
 --TODO: implement w reset, clk

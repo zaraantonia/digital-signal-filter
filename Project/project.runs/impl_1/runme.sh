@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.runs/impl_1'
+HD_PWD='D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log UART_controller.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source UART_controller.tcl -notrace
+EAStep vivado -log UART_final.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source UART_final.tcl -notrace
 
 

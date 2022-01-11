@@ -1,0 +1,2 @@
+D:\3.1\ProjectSCSCopy\digital-signal-filter\UART_transceiver_pc\Debug\UART_transceiver_pc.exe
+D:\3.1\ProjectSCSCopy\digital-signal-filter\UART_transceiver_pc\Debug\UART_transceiver_pc.pdb

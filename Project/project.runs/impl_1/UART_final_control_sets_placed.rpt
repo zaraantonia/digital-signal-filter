@@ -1,0 +1,88 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Jan 11 19:10:09 2022
+| Host         : DESKTOP-MSQB66V running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file UART_final_control_sets_placed.rpt
+| Design       : UART_final
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    27 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    10 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            2 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              37 |           15 |
+| Yes          | No                    | No                     |              54 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              38 |           12 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                      Enable Signal                      |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | uart/transmitter/baud_rate_clk_reg_n_0                  | reset_IBUF                                          |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG |                                                         |                                                     |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | uart/receiver/UART_rx_FSM.bit_duration_count[3]_i_1_n_0 | reset_IBUF                                          |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | uart/transmitter/FSM_onehot_tx_state[3]_i_1_n_0         | reset_IBUF                                          |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | tx_button_controller/button_pressed                     | tx_button_controller/flipflop_4_reg_0               |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG | uart/receiver/rx_data_out[7]_i_1_n_0                    | reset_IBUF                                          |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | uart/transmitter/stored_data                            |                                                     |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | tx_button_controller/count0_carry__0_n_3                | tx_button_controller/pause_counter.count[0]_i_1_n_0 |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG |                                                         | reset_IBUF                                          |               15 |             37 |         2.47 |
+|  clk_IBUF_BUFG | tx_button_controller/button_pressed                     |                                                     |               11 |             55 |         5.00 |
++----------------+---------------------------------------------------------+-----------------------------------------------------+------------------+----------------+--------------+
+
+

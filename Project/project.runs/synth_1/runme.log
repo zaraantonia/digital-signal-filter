@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log UART_controller.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_controller.tcl
+    with args -log UART_final.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_final.tcl
 
 
 
@@ -11,219 +11,127 @@
 
 Sourcing tcl script 'C:/Users/Antonia/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
 Set Board Part RepoPath: "C:\Users\Antonia\Desktop\UNI\Digilent\Git\vivado-boards\new"
-source UART_controller.tcl -notrace
+source UART_final.tcl -notrace
 WARNING: [Board 49-91] Board repository path '"C:\Users\Antonia\Desktop\UNI\Digilent\Git\vivado-boards\new"' does not exist, it will not be used to search board files.
-Command: synth_design -top UART_controller -part xc7a35tcpg236-1
+Command: synth_design -top UART_final -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10104
+INFO: [Synth 8-7075] Helper process launched with PID 16120
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.289 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1014.383 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'UART_controller' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_controller.vhd:22]
-INFO: [Synth 8-3491] module 'button_debounce' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/debouncer.vhd:7' bound to instance 'tx_button_controller' of component 'button_debounce' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_controller.vhd:54]
-INFO: [Synth 8-638] synthesizing module 'button_debounce' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/debouncer.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'UART_final' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/UART_final.vhd:22]
+INFO: [Synth 8-3491] module 'button_debounce' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/debouncer.vhd:7' bound to instance 'tx_button_controller' of component 'button_debounce' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/UART_final.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'button_debounce' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/debouncer.vhd:19]
 	Parameter COUNTER_SIZE bound to: 10000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'button_debounce' (1#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/debouncer.vhd:19]
-INFO: [Synth 8-3491] module 'UART' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart.vhd:9' bound to instance 'UART_transceiver' of component 'UART' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_controller.vhd:62]
-INFO: [Synth 8-638] synthesizing module 'UART' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart.vhd:25]
-INFO: [Synth 8-3491] module 'UART_tx' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_tx.vhd:7' bound to instance 'transmitter' of component 'UART_tx' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart.vhd:63]
-INFO: [Synth 8-638] synthesizing module 'UART_tx' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_tx.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'button_debounce' (1#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/debouncer.vhd:19]
+INFO: [Synth 8-3491] module 'UART_transceiver' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:9' bound to instance 'uart' of component 'UART_transceiver' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/UART_final.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'UART_transceiver' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:25]
+INFO: [Synth 8-3491] module 'UART_tx' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_tx.vhd:7' bound to instance 'transmitter' of component 'UART_tx' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'UART_tx' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_tx.vhd:22]
 	Parameter BAUD_CLK_TICKS bound to: 868 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_tx.vhd:119]
-INFO: [Synth 8-256] done synthesizing module 'UART_tx' (2#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_tx.vhd:21]
-INFO: [Synth 8-3491] module 'UART_rx' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_rx.vhd:7' bound to instance 'receiver' of component 'UART_rx' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'UART_rx' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_rx.vhd:21]
+INFO: [Synth 8-226] default block is never used [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_tx.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'UART_tx' (2#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_tx.vhd:22]
+INFO: [Synth 8-3491] module 'UART_rx' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_rx.vhd:7' bound to instance 'receiver' of component 'UART_rx' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'UART_rx' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_rx.vhd:21]
 	Parameter BAUD_X16_CLK_TICKS bound to: 54 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_rx.vhd:77]
-INFO: [Synth 8-256] done synthesizing module 'UART_rx' (3#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_rx.vhd:21]
-INFO: [Synth 8-3491] module 'filters' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:7' bound to instance 'filterss' of component 'filters' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'filters' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:15]
-INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier1' of component 'multiplier8bit' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:71]
-INFO: [Synth 8-638] synthesizing module 'multiplier8bit' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:12]
-INFO: [Synth 8-3491] module 'wallaceTree' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeLL' of component 'wallaceTree' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'wallaceTree' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:11]
-INFO: [Synth 8-3491] module 'halfAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA1' of component 'halfAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:69]
-INFO: [Synth 8-638] synthesizing module 'halfAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'halfAdder' (4#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:11]
-INFO: [Synth 8-3491] module 'halfAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA2' of component 'halfAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:70]
-INFO: [Synth 8-3491] module 'halfAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA3' of component 'halfAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:72]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA1' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'fullAdder' (5#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:11]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA2' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:75]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA3' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:76]
-INFO: [Synth 8-3491] module 'halfAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA4' of component 'halfAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:78]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA4' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:80]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA5' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:81]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA6' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:82]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA7' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:83]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA8' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:84]
-INFO: [Synth 8-256] done synthesizing module 'wallaceTree' (6#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:11]
-INFO: [Synth 8-3491] module 'wallaceTree' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeLH' of component 'wallaceTree' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:47]
-INFO: [Synth 8-3491] module 'wallaceTree' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeHL' of component 'wallaceTree' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:48]
-INFO: [Synth 8-3491] module 'wallaceTree' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeHH' of component 'wallaceTree' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:49]
-INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder1' of component 'rippleCarryAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'rippleCarryAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:13]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder1' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:24]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder2' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:25]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder3' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:26]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder4' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:27]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder5' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:28]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder6' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:29]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder7' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:30]
-INFO: [Synth 8-3491] module 'fullAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder8' of component 'fullAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:31]
-INFO: [Synth 8-256] done synthesizing module 'rippleCarryAdder' (7#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:13]
-INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder2' of component 'rippleCarryAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:52]
-INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder3' of component 'rippleCarryAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:53]
-INFO: [Synth 8-256] done synthesizing module 'multiplier8bit' (8#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:12]
-INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier2' of component 'multiplier8bit' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:72]
-INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier3' of component 'multiplier8bit' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:73]
-INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder1' of component 'rippleCarryAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:75]
-INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder2' of component 'rippleCarryAdder' [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:76]
-INFO: [Synth 8-226] default block is never used [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:107]
-INFO: [Synth 8-256] done synthesizing module 'filters' (9#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/filters.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'UART' (10#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart.vhd:25]
-INFO: [Synth 8-256] done synthesizing module 'UART_controller' (11#1) [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/sources_1/new/uart_controller.vhd:22]
+INFO: [Synth 8-226] default block is never used [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_rx.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'UART_rx' (3#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_rx.vhd:21]
+INFO: [Synth 8-3491] module 'filters' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:7' bound to instance 'flt' of component 'filters' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'filters' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:16]
+INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier1' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:12]
+INFO: [Synth 8-3491] module 'wallaceTree' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeLL' of component 'wallaceTree' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'wallaceTree' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:11]
+INFO: [Synth 8-3491] module 'halfAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA1' of component 'halfAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'halfAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'halfAdder' (4#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:11]
+INFO: [Synth 8-3491] module 'halfAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA2' of component 'halfAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:70]
+INFO: [Synth 8-3491] module 'halfAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA3' of component 'halfAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:72]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA1' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'fullAdder' (5#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:11]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA2' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:75]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA3' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:76]
+INFO: [Synth 8-3491] module 'halfAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/halfAdder.vhd:6' bound to instance 'HA4' of component 'halfAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:78]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA4' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:80]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA5' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:81]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA6' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:82]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA7' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:83]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'FA8' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'wallaceTree' (6#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:11]
+INFO: [Synth 8-3491] module 'wallaceTree' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeLH' of component 'wallaceTree' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:47]
+INFO: [Synth 8-3491] module 'wallaceTree' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeHL' of component 'wallaceTree' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:48]
+INFO: [Synth 8-3491] module 'wallaceTree' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeHH' of component 'wallaceTree' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:49]
+INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder1' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:13]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder1' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:24]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder2' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:25]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder3' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:26]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder4' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:27]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder5' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:28]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder6' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:29]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder7' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:30]
+INFO: [Synth 8-3491] module 'fullAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/fullAdder.vhd:6' bound to instance 'fullAdder8' of component 'fullAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'rippleCarryAdder' (7#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:13]
+INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder2' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:52]
+INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder3' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'multiplier8bit' (8#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:12]
+INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier2' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:73]
+INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier3' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:74]
+INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder1' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:76]
+INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder2' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:77]
+INFO: [Synth 8-226] default block is never used [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:111]
+INFO: [Synth 8-256] done synthesizing module 'filters' (9#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'UART_transceiver' (10#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'UART_final' (11#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/UART_final.vhd:22]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.289 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.383 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.289 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.383 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.289 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.383 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1015.289 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1014.383 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:47]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:48]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:49]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:111]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:111]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnC'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:112]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:112]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:115]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:115]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:116]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:116]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:117]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:117]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'btnR'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:118]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:118]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:269]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:269]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'RsTx'. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:270]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:270]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_controller_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/UART_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc]
-CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'sys_clk_pin'.
-New: create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk], [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc:48]
-Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk], [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Lab5/basys3.xdc:9]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-Finished Parsing XDC File [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_controller_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/UART_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc]
+Finished Parsing XDC File [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/constrs_1/imports/Desktop/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_final_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/UART_final_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1059.781 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1051.785 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1059.781 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1051.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'UART_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UART_rx'
@@ -246,7 +154,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encodi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'UART_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -300,25 +208,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1051.785 ; gain = 37.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -336,48 +244,50 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+----------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name     | RTL Name                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+----------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|UART_controller | UART_transceiver/filterss/y_reg[7] | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
-+----------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|UART_final  | uart/flt/y_reg[7] | 3      | 7     | NO           | NO                 | YES               | 7      | 0       | 
+|UART_final  | uart/flt/y_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|UART_final  | uart/flt/d_reg[7] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -396,42 +306,40 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
+|1     |BUFG   |     1|
 |2     |CARRY4 |     6|
 |3     |LUT1   |     4|
-|4     |LUT2   |    17|
+|4     |LUT2   |    14|
 |5     |LUT3   |    10|
-|6     |LUT4   |    10|
-|7     |LUT5   |    18|
-|8     |LUT6   |    42|
-|9     |MUXF7  |     1|
-|10    |SRL16E |     8|
-|11    |FDRE   |   108|
-|12    |FDSE   |    14|
-|13    |IBUF   |    11|
-|14    |OBUF   |     9|
+|6     |LUT4   |     9|
+|7     |LUT5   |    19|
+|8     |LUT6   |    41|
+|9     |SRL16E |     9|
+|10    |FDRE   |   111|
+|11    |FDSE   |    14|
+|12    |IBUF   |     4|
+|13    |OBUF   |    10|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1059.781 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1059.781 ; gain = 44.492
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1057.754 ; gain = 5.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1057.754 ; gain = 43.371
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1070.055 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1068.801 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1072.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1072.711 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 29 Warnings, 29 Critical Warnings and 0 Errors encountered.
+81 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1072.184 ; gain = 56.895
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Antonia/Desktop/GitHub Workspace/DigitalSignalFilters/Project/project.runs/synth_1/UART_controller.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file UART_controller_utilization_synth.rpt -pb UART_controller_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 15 10:35:42 2021...
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.711 ; gain = 58.328
+INFO: [Common 17-1381] The checkpoint 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.runs/synth_1/UART_final.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file UART_final_utilization_synth.rpt -pb UART_final_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 11 19:09:37 2022...

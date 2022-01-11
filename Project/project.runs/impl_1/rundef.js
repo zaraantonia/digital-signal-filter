@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
-         "-log UART_controller.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source UART_controller.tcl -notrace" );
+         "-log UART_final.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source UART_final.tcl -notrace" );
 
 
 

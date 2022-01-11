@@ -18,6 +18,7 @@ entity UART_tx is
         );
 end UART_tx;
 
+
 architecture Behavioral of UART_tx is
 
     type tx_states_t is (IDLE, START, DATA, STOP);
