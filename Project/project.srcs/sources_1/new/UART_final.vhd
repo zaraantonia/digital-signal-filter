@@ -12,7 +12,7 @@ entity UART_final is
         ovf           : out  std_logic;
         data_in          : in  std_logic_vector (7 downto 0);
         data_out         : out std_logic_vector (7 downto 0);
-
+        filter_select    : in std_logic_vector (1 downto 0);
         rx               : in  std_logic;
         tx               : out std_logic
         );
@@ -39,7 +39,7 @@ architecture Behavioral of UART_final is
             ovf           : out  std_logic;
             data_in        : in  std_logic_vector (7 downto 0);
             data_out       : out std_logic_vector (7 downto 0);
-
+            filter_select    : in std_logic_vector (1 downto 0);
             rx             : in  std_logic;
             tx             : out std_logic
             );
@@ -66,7 +66,8 @@ begin
             data_out       => data_out,
             rx             => rx,
             tx             => tx,
-            ovf           => ovf
+            ovf           => ovf,
+            filter_select => filter_select
             );
 
 end Behavioral;

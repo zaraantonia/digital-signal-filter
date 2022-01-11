@@ -15,7 +15,7 @@ entity UART_transceiver is
         ovf           : out  std_logic;
         data_in        : in  std_logic_vector (7 downto 0);
         data_out       : out std_logic_vector (7 downto 0);
-
+        filter_select    : in std_logic_vector (1 downto 0);
         rx             : in  std_logic;
         tx             : out std_logic
         );
@@ -49,12 +49,12 @@ architecture Behavioral of UART_transceiver is
            y : out STD_LOGIC_VECTOR (7 downto 0);
            clk : in STD_LOGIC;
            new_input: in std_logic;
-           filterSelect : in STD_LOGIC_VECTOR (2 downto 0);
-           overflow: out std_logic);
+           filterSelect : in STD_LOGIC_VECTOR (1 downto 0);
+           overflow: out std_logic;
+           reset: in std_logic);
 end component;
 
 signal y: STD_LOGIC_VECTOR (7 downto 0);
-signal filterSelect : STD_LOGIC_VECTOR (2 downto 0) := "000";
 signal c_input: std_logic_vector(7 downto 0) := (others => '0');
 
 begin
@@ -77,7 +77,7 @@ begin
             rx_data_out    => c_input
             );
             
-   flt: filters port map (x => c_input, y => y, clk => clk, filterSelect => filterSelect, overflow => ovf, new_input => tx_start);
+   flt: filters port map (x => c_input, y => y, clk => clk, filterSelect => filter_select, overflow => ovf, new_input => tx_start, reset => reset);
 
     data_out <= y;
     

@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Jan 11 19:09:04 2022
-# Process ID: 16804
+# Start of session at: Tue Jan 11 19:40:51 2022
+# Process ID: 4684
 # Current directory: D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.runs/synth_1
 # Command line: vivado.exe -log UART_final.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_final.tcl
 # Log file: D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.runs/synth_1/UART_final.vds
@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16120
+INFO: [Synth 8-7075] Helper process launched with PID 8928
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1014.383 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.852 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'UART_final' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/UART_final.vhd:22]
 INFO: [Synth 8-3491] module 'button_debounce' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/debouncer.vhd:7' bound to instance 'tx_button_controller' of component 'button_debounce' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/UART_final.vhd:52]
@@ -42,8 +42,8 @@ INFO: [Synth 8-638] synthesizing module 'UART_rx' [D:/3.1/ProjectSCSCopy/digital
 INFO: [Synth 8-226] default block is never used [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_rx.vhd:77]
 INFO: [Synth 8-256] done synthesizing module 'UART_rx' (3#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart_rx.vhd:21]
 INFO: [Synth 8-3491] module 'filters' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:7' bound to instance 'flt' of component 'filters' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:80]
-INFO: [Synth 8-638] synthesizing module 'filters' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:16]
-INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier1' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'filters' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:17]
+INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier1' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:73]
 INFO: [Synth 8-638] synthesizing module 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:12]
 INFO: [Synth 8-3491] module 'wallaceTree' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:6' bound to instance 'wallaceTreeLL' of component 'wallaceTree' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:46]
 INFO: [Synth 8-638] synthesizing module 'wallaceTree' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/imports/new/wallaceTree.vhd:11]
@@ -81,27 +81,27 @@ INFO: [Synth 8-256] done synthesizing module 'rippleCarryAdder' (7#1) [D:/3.1/Pr
 INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder2' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:52]
 INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder3' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'multiplier8bit' (8#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:12]
-INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier2' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:73]
-INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier3' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:74]
-INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder1' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:76]
-INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder2' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:77]
-INFO: [Synth 8-226] default block is never used [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:111]
-INFO: [Synth 8-256] done synthesizing module 'filters' (9#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:16]
+INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier2' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:74]
+INFO: [Synth 8-3491] module 'multiplier8bit' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/multiplier8bit.vhd:5' bound to instance 'multiplier3' of component 'multiplier8bit' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:75]
+INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder1' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:77]
+INFO: [Synth 8-3491] module 'rippleCarryAdder' declared at 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/rippleCarryAdder.vhd:5' bound to instance 'rippleCarryAdder2' of component 'rippleCarryAdder' [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:78]
+INFO: [Synth 8-226] default block is never used [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'filters' (9#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/filters.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'UART_transceiver' (10#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/uart.vhd:25]
 INFO: [Synth 8-256] done synthesizing module 'UART_final' (11#1) [D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.srcs/sources_1/new/UART_final.vhd:22]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.383 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1015.852 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.383 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1015.852 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.383 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1015.852 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1014.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1015.852 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -112,26 +112,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/UART_final_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1051.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1047.410 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1051.785 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1047.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1047.410 ; gain = 31.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1047.410 ; gain = 31.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1047.410 ; gain = 31.559
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'UART_tx'
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'UART_rx'
@@ -154,7 +154,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encodi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'UART_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1047.410 ; gain = 31.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -162,7 +162,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   10 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 1     
 	   2 Input    4 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 2     
@@ -179,19 +179,16 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 12    
 +---Muxes : 
 	   2 Input    8 Bit        Muxes := 2     
-	   4 Input    8 Bit        Muxes := 2     
-	   8 Input    8 Bit        Muxes := 9     
+	   4 Input    8 Bit        Muxes := 8     
 	   2 Input    6 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 2     
 	   4 Input    4 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 1     
-	   4 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 1     
-	   8 Input    2 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 5     
-	   4 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 11    
 	   3 Input    1 Bit        Muxes := 3     
-	   8 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -208,25 +205,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1047.410 ; gain = 31.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1047.410 ; gain = 31.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1082.188 ; gain = 66.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1051.785 ; gain = 37.402
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -244,53 +241,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|UART_final  | uart/flt/y_reg[7] | 3      | 7     | NO           | NO                 | YES               | 7      | 0       | 
-|UART_final  | uart/flt/y_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|UART_final  | uart/flt/d_reg[7] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -308,38 +289,37 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     6|
-|3     |LUT1   |     4|
-|4     |LUT2   |    14|
-|5     |LUT3   |    10|
-|6     |LUT4   |     9|
-|7     |LUT5   |    19|
-|8     |LUT6   |    41|
-|9     |SRL16E |     9|
-|10    |FDRE   |   111|
-|11    |FDSE   |    14|
-|12    |IBUF   |     4|
-|13    |OBUF   |    10|
+|3     |LUT1   |     5|
+|4     |LUT2   |    31|
+|5     |LUT3   |    23|
+|6     |LUT4   |    41|
+|7     |LUT5   |    48|
+|8     |LUT6   |    95|
+|9     |FDRE   |   204|
+|10    |FDSE   |    14|
+|11    |IBUF   |     6|
+|12    |OBUF   |    10|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1057.754 ; gain = 43.371
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1057.754 ; gain = 5.969
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1057.754 ; gain = 43.371
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1100.242 ; gain = 52.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1100.242 ; gain = 84.391
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1068.801 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1105.125 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1072.711 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1105.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 81 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1072.711 ; gain = 58.328
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1105.125 ; gain = 89.273
 INFO: [Common 17-1381] The checkpoint 'D:/3.1/ProjectSCSCopy/digital-signal-filter/Project/project.runs/synth_1/UART_final.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file UART_final_utilization_synth.rpt -pb UART_final_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 11 19:09:37 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 11 19:41:41 2022...

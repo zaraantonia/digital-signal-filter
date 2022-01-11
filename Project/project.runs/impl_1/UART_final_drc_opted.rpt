@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Jan 11 19:10:06 2022
+| Date         : Tue Jan 11 19:42:18 2022
 | Host         : DESKTOP-MSQB66V running 64-bit major release  (build 9200)
 | Command      : report_drc -file UART_final_drc_opted.rpt -pb UART_final_drc_opted.pb -rpx UART_final_drc_opted.rpx
 | Design       : UART_final

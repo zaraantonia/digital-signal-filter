@@ -9,8 +9,9 @@ entity filters is
            y : out STD_LOGIC_VECTOR (7 downto 0);
            clk : in STD_LOGIC;
            new_input: in std_logic;
-           filterSelect : in STD_LOGIC_VECTOR (2 downto 0);
-           overflow: out std_logic);
+           filterSelect : in STD_LOGIC_VECTOR (1 downto 0);
+           overflow: out std_logic;
+           reset: in std_logic);
 end filters;
 
 architecture Behavioral of filters is
@@ -80,23 +81,35 @@ rippleCarryAdder2: rippleCarryAdder port map (a => rc, b => rd, cin => cout1, su
 process(clk)
 begin
     if rising_edge(clk) then
-    if new_input = '1' then
-        if xn2_pipeline_en = '1' then
-            xn2_pipeline <= xn2;
+        if reset = '1' then
+            xn2_pipeline <= (others => '0');
+            xn1_pipeline_001 <= (others => '0');
+            xn4 <= (others => '0');
+            xn3 <= (others => '0');
+            xn2 <= (others => '0');
+            xn1 <= (others => '0');
+            xn <= (others => '0');
+            yn1 <= (others => '0');
+            yn <= (others => '0');
+            n <= (others => '0');
+            y <= (others => '0');
+        elsif new_input = '1' then
+            if xn2_pipeline_en = '1' then
+                xn2_pipeline <= xn2;
+            end if;
+            if xn1_pipeline_001_en = '1' then
+                xn1_pipeline_001 <= xn;
+            end if;
+            xn4 <= xn3;
+            xn3 <= xn2;
+            xn2 <= xn1;
+            xn1 <= xn;
+            xn <= x;
+            yn1 <= yn;
+            n <= n + '1';
+            yn <= sum2;
+            y <= yn;
         end if;
-        if xn1_pipeline_001_en = '1' then
-            xn1_pipeline_001 <= xn;
-        end if;
-        xn4 <= xn3;
-        xn3 <= xn2;
-        xn2 <= xn1;
-        xn1 <= xn;
-        xn <= x;
-        yn1 <= yn;
-        n <= n + '1';
-        yn <= sum2;
-        y <= yn;
-    end if;
     end if;
 end process;
 
@@ -110,7 +123,7 @@ begin
     if new_input = '1' then
         case filterSelect is
             --2xn + 3xn1
-            when "000" =>
+            when "00" =>
                 a <= "00000010";
                 b <= xn;
                 c <= "00000011";
@@ -125,7 +138,7 @@ begin
                 xn1_pipeline_001_en <= '0';
                 yn_pipeline_011_en <= '0';
             --xn + 2*n*xn1
-            when "001" =>
+            when "01" =>
                 a <= "00000010";
                 b <= n;
                 c <= product1;
@@ -140,7 +153,7 @@ begin
                 xn1_pipeline_001_en <= '1';
                 yn_pipeline_011_en <= '0';
             --4xn + 2xn1 + 3xn2
-            when "010" =>
+            when "10" =>
                 a <= "00000100";
                 b <= xn;
                 c <= "00000010";
@@ -154,27 +167,8 @@ begin
                 xn2_pipeline_en <= '1';
                 xn1_pipeline_001_en <= '0';
                 yn_pipeline_011_en <= '0';
-            --2xn - xn1 + 3yn1
-            when "011" =>
-                a <= "00000010";
-                b <= xn;
-                c <= "00000001";
-                d <= (xn1 nand "11111111") + '1'; -- (-xn1)
-                e <= "00000011";
-                --if yn_pipeline_011_en = '1' then
-                 --   f <= yn_pipeline_011;
-                  --  yn_pipeline_011_en <= '0';
-                --else 
-                f <= sum2;
-                --end if;
-                ra <= product1;
-                rb <= product2;
-                rc <= sum1;
-                rd <= product3;
-                xn2_pipeline_en <= '0';
-                xn1_pipeline_001_en <= '0';
             --xn*xn + xn1*xn1
-            when "100" =>
+            when "11" =>
                 a <= xn;
                 b <= xn;
                 c <= xn1;
@@ -184,46 +178,6 @@ begin
                 ra <= product1;
                 rb <= product2;
                 rc <= sum1;
-                rd <= "00000000";
-                xn2_pipeline_en <= '0';
-                xn1_pipeline_001_en <= '0';
-            --h0 * xn + h1 * xn1 + h2 *xn2 --TODO
-            when "101" =>
-                a <= "00000000";
-                b <= "00000000";
-                c <= "00000000";
-                d <= "00000000";
-                e <= "00000000";
-                f <= "00000000";
-                ra <= "00000000";
-                rb <= "00000000";
-                rc <= "00000000";
-                rd <= "00000000";
-                xn2_pipeline_en <= '0';
-                xn1_pipeline_001_en <= '0';
-            when "110" =>
-                a <= "00000000";
-                b <= "00000000";
-                c <= "00000000";
-                d <= "00000000";
-                e <= "00000000";
-                f <= "00000000";
-                ra <= "00000000";
-                rb <= "00000000";
-                rc <= "00000000";
-                rd <= "00000000";
-                xn2_pipeline_en <= '0';
-                xn1_pipeline_001_en <= '0';
-            when "111" =>
-                a <= "00000000";
-                b <= "00000000";
-                c <= "00000000";
-                d <= "00000000";
-                e <= "00000000";
-                f <= "00000000";
-                ra <= "00000000";
-                rb <= "00000000";
-                rc <= "00000000";
                 rd <= "00000000";
                 xn2_pipeline_en <= '0';
                 xn1_pipeline_001_en <= '0';
@@ -244,6 +198,5 @@ begin
    end if;
    end if;
 end process;
---TODO: implement w reset, clk
 
 end Behavioral;

@@ -1,3 +1,16 @@
+Project/project.cache/
+Project/project.hw/
+Project/project.ip_user_files/
+Project/project.runs/
+Project/project.sim/
+Project/project.xpr
+UART_transceiver_pc/Debug/
+UART_transceiver_pc/.vs/
+UART_transceiver_pc/UART_transceiver_pc.sln
+UART_transceiver_pc/UART_transceiver_pc.vcxproj
+UART_transceiver_pc/UART_transceiver_pc.vcxproj.filters
+UART_transceiver_pc/UART_transceiver_pc.vcxproj.user
+
 # Prerequisites
 *.d
 
